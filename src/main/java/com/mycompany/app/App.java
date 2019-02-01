@@ -1,4 +1,4 @@
-xpackage com.mycompany.app;
+package com.mycompany.app;
 
 import static spark.Spark.get;
 import static spark.Spark.port;
@@ -28,8 +28,7 @@ public static void main(String[] args) {
 
         get("/", (req, res) -> "Hello World!");
 
-//		get("/friend", (req, res) -> "Thanks for being my friend.");
-
+		get("/trial", (req, res) -> "note");
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
@@ -75,4 +74,3 @@ public static void main(String[] args) {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 }
-
