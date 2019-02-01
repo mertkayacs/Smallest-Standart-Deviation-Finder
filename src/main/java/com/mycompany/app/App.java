@@ -32,6 +32,7 @@ public static void main(String[] args) {
 		get("/annem", (req, res) -> "annecim iyiki benim annemsin seni çok seviyorum");
 		get("/babam", (req, res) -> "babacım iyiki benim babamsın seni çok seviyorum.");
 		get("/friend", (req, res) -> "İyiki bromsun dude.");
+		get("/friends", (req, res) -> "You are the best friend ever sophie.");
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
