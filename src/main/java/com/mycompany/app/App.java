@@ -29,8 +29,8 @@ public static void main(String[] args) {
         get("/", (req, res) -> "Hello World!");
 
 		get("/mylove", (req, res) -> "İyiki benim aşkımsın canım herşeyim burcum <3");
-		get("/annem", (req, res) -> "annecim iyiki benim annemsin seni çok seviyorum");
-		get("/babam", (req, res) -> "babacım iyiki benim babamsın seni çok seviyorum.");
+		get("/annem", (req, res) -> "annecim iyiki benim annemsin seni çok seviyorum - Mert Kaya");
+		get("/babam", (req, res) -> "babacım iyiki benim babamsın seni çok seviyorum. -Mert Kaya");
 		get("/friend", (req, res) -> "İyiki bromsun dude.");
 		get("/friends", (req, res) -> "You are the best friend ever sophie.");
 
