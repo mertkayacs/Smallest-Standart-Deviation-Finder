@@ -1,4 +1,4 @@
-package com.mycompany.app;
+xpackage com.mycompany.app;
 
 import static spark.Spark.get;
 import static spark.Spark.port;
@@ -13,7 +13,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
+    public static boolean search(ArrayList<Integer> array, int e,String name1 , String name2) {
       System.out.println("inside search");
       if (array == null) return false;
 
@@ -28,11 +28,8 @@ public static void main(String[] args) {
 
         get("/", (req, res) -> "Hello World!");
 
-		get("/mylove", (req, res) -> "İyiki benim aşkımsın canım herşeyim burcum <3");
-		get("/annem", (req, res) -> "Annecim iyiki benim annemsin seni çok seviyorum.Dünyanın en iyi annesi Dilek Kayadır :) - Mert Kaya");
-		get("/babam", (req, res) -> "Babacım iyiki benim babamsın seni çok seviyorum. Ali Kaya is the best! -Mert Kaya");
-		get("/friend", (req, res) -> "İyiki bromsun dude.");
-		get("/friends", (req, res) -> "You are the best friend ever sophie.");
+//		get("/friend", (req, res) -> "Thanks for being my friend.");
+
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
