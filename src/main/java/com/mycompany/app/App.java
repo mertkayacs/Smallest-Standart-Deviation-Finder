@@ -4,6 +4,8 @@ import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
 
+import java.util.Arrays; 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,12 +25,117 @@ public class App
       return false;
     }
 
-public static void main(String[] args) {
+	public static double stdevfind(int[] array){
+
+		if(array.length == 0)
+			return -1;
+
+		double sum = 0;		
+
+		for(int a : array)
+			sum += a;
+
+		System.out.println(sum);
+		
+		
+		double mean = sum / array.length;
+		System.out.println(mean);
+		
+		
+		double[] diff = new double[array.length]; 
+
+		
+		
+		for(int i = 0 ; i < array.length ; i++){
+
+			diff[i] = Math.pow(mean - array[i],2);			
+
+		}
+		
+		sum = 0;
+
+		for(double a : diff)
+			
+			sum += a;
+
+		sum = sum / (array.length-1); 			
+				
+		double answer = Math.sqrt(sum);
+			
+		System.out.println();
+		
+		return answer;
+		
+		
+	}
+
+
+	
+	public static String standartDeviation(ArrayList<Integer> array1 , ArrayList<Integer> array2 ,ArrayList<Integer> array3,ArrayList<Integer> int[] array4 ){ 
+
+	//gets 4 integer arrays and shows the order of standart deviation of each array
+		
+		double ans1 = stdev(array1);
+	
+		double ans2 = stdev(array2);
+
+		double ans3 = stdev(array3);
+
+		double ans4 = stdev(array4);
+
+		double array[] = new array[4];
+		array[0] = ans1;
+		array[1] = ans2;
+		array[2] = ans3;
+		array[3] = ans4;
+
+/*
+		String starray[] = new starray[4];
+		starray[0] = "array1" +array[0];
+		starray[0] = "array2" +array[0];
+		starray[0] = "array3" +array[0];
+		starray[0] = "array4" +array[0];
+*/
+
+		double array2[] = array[];
+		Arrays.sort(array);
+		
+		
+
+		if(array[0] == array2[0]){
+				
+			return "1st list.Its standart deviation which is : "+array[0];
+	
+		}else if(array[0] == array2[1]){
+				
+
+			return "2nd list.Its standart deviation which is : "+array[0];
+	
+
+		}else if(array[0] == array2[2]){
+				
+			return "3rd list.Its standart deviation which is : "+array[0];
+	
+
+		}else{
+
+			return "4th list.Its standart deviation which is : "+array[0];
+	
+
+		}
+		
+		
+	
+		
+
+	}
+
+	public static void main(String[] args) {
         port(getHerokuAssignedPort());
 
         get("/", (req, res) -> "Hello World!");
 
-		get("/simay", (req, res) -> "Simay'ım canım kardeşim. Sen bir abinin sahip olabileceği en müthiş kardeşsin.İyiki benim kardeşimsin. Seni çok seviyorum -Abin Mert.");
+
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
@@ -37,19 +144,60 @@ public static void main(String[] args) {
           String input1 = req.queryParams("input1");
           java.util.Scanner sc1 = new java.util.Scanner(input1);
           sc1.useDelimiter("[;\r\n]+");
-          java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
+          java.util.ArrayList<Integer> inputList1 = new java.util.ArrayList<>();
           while (sc1.hasNext())
           {
             int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
-            inputList.add(value);
+            inputList1.add(value);
           }
-          System.out.println(inputList);
+          System.out.println(inputList1);
 
 
+
+          String input2 = req.queryParams("input2");
+          java.util.Scanner sc2 = new java.util.Scanner(input2);
+          sc1.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
+          while (sc2.hasNext())
+          {
+            int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
+            inputList2.add(value);
+          }
+          System.out.println(inputList2);
+
+
+
+          String input3 = req.queryParams("input3");
+          java.util.Scanner sc3 = new java.util.Scanner(input3);
+          sc1.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList3 = new java.util.ArrayList<>();
+          while (sc3.hasNext())
+          {
+            int value = Integer.parseInt(sc3.next().replaceAll("\\s",""));
+            inputList3.add(value);
+          }
+          System.out.println(inputList3);
+
+
+          String input4 = req.queryParams("input4");
+          java.util.Scanner sc4 = new java.util.Scanner(input4);
+          sc1.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList4 = new java.util.ArrayList<>();
+          while (sc4.hasNext())
+          {
+            int value = Integer.parseInt(sc4.next().replaceAll("\\s",""));
+            inputList4.add(value);
+          }
+          System.out.println(inputList4);
+
+/*
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
+*/
 
-          boolean result = App.search(inputList, input2AsInt);
+		  //double sonucarray = standartDeviation(inputList1,inputList2,inputList3,inputList4);
+
+          String result = "Smallest standart deviation is : " + standartDeviation(inputList1,inputList2,inputList3,inputList4);	  
 
          Map map = new HashMap();
           map.put("result", result);
@@ -60,7 +208,8 @@ public static void main(String[] args) {
         get("/compute",
             (rq, rs) -> {
               Map map = new HashMap();
-              map.put("result", "not computed yet!");
+              map.put("information", "Enter the lists for the minimum standart deviation");
+              map.put("result", "Enter 4 lists of integers.");
               return new ModelAndView(map, "compute.mustache");
             },
             new MustacheTemplateEngine());
