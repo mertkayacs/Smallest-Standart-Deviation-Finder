@@ -74,6 +74,19 @@ public class App
 	public static String standartDeviation(ArrayList<Integer> array1 , ArrayList<Integer> array2 ,ArrayList<Integer> array3,ArrayList<Integer> array4 ){ 
 
 	//gets 4 integer arrays and shows the order of standart deviation of each array
+
+		if(array1 == null)
+			return null;
+
+		if(array2 == null)
+			return null;
+
+		if(array3 == null)
+			return null;
+
+		if(array4 == null)
+			return null;
+
 		
 		double ans1 = stdev(array1);
 	
@@ -125,6 +138,14 @@ public class App
 
 		}else{
 
+			if(array[0] == array[1]){
+				if(array[1] == array[2]){
+					if(array[2] == array[3]){
+						return "All of the lists standart deviation is equal. : "+array[0];
+					}
+				}
+			}
+			
 			return "4th list.Its standart deviation is : "+array[0];
 	
 
