@@ -28,7 +28,7 @@ public class App
 	public static double stdev(ArrayList<Integer> array){
 
 		if(array.size() == 0)
-			return -1;
+			return 999;
 
 		double sum = 0;		
 
