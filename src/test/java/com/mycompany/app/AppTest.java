@@ -19,11 +19,12 @@ public class AppTest extends TestCase{
   public void testStandartDeviationMethodEqualCases(){
 
     ArrayList<Integer> input1 = new ArrayList<Integer>(Arrays.asList(1,1,1,1,1,1,1,1,1,1));
-    ArrayList<Integer> input2 = new ArrayList<Integer>(Arrays.asList(1,1,1,1,1,1,1,1,1,1));
-    ArrayList<Integer> input3 = new ArrayList<Integer>(Arrays.asList(1,1,1,1,1,1,1,1,1,1));
-    ArrayList<Integer> input4 = new ArrayList<Integer>(Arrays.asList(1,1,1,1,1,1,1,1,1,1));
+    ArrayList<Integer> input2 = new ArrayList<Integer>(Arrays.asList(2,2,2,2,2,2,2,2,2,2));
+    ArrayList<Integer> input3 = new ArrayList<Integer>(Arrays.asList(3,3,3,3,3,3,3,3,3,3));
+    ArrayList<Integer> input4 = new ArrayList<Integer>(Arrays.asList(4,4,4,4,4,4,4,4,4,4));
     String str = ""+App.standartDeviation(input1, input2, input3, input4);
-    assertTrue((str.equals("All of the lists standart deviation is equal. : 0.0")));
+	String answer = ""+App.stdev(input1);
+    assertTrue((str.equals("All of the lists standart deviation is equal. : "+answer)));
 
   }
 
@@ -38,6 +39,26 @@ public class AppTest extends TestCase{
 
   }
 
+ public void testAllInputNullCase(){
+
+    ArrayList<Integer> input1 = null;
+    ArrayList<Integer> input2 = null;
+    ArrayList<Integer> input3 = null;
+    ArrayList<Integer> input4 = null;
+	String a = App.standartDeviation(input1, input2, input3, input4);
+    assertTrue(a == null);
+
+  }
+
+ public void testSameInputCase(){
+
+      ArrayList<Integer> input1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+      String str = ""+App.standartDeviation(input1, input1, input1, input1);
+	  String answer = ""+App.stdev(input1);
+      assertTrue((str.equals("All of the lists standart deviation is equal. : "+answer)));
+						  
+
+  }
+
 
 }
-

@@ -226,9 +226,10 @@ public class App
 */
 
 		  //double sonucarray = standartDeviation(inputList1,inputList2,inputList3,inputList4);
-
+	
+			
          String result = "Smallest standart deviation is : " + standartDeviation(inputList1,inputList2,inputList3,inputList4);	  
-
+			
          Map map = new HashMap();
           map.put("result", result);
           return new ModelAndView(map, "compute.mustache");
