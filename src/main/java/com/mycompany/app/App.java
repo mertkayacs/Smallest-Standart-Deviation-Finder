@@ -28,7 +28,7 @@ public static void main(String[] args) {
 
         get("/", (req, res) -> "Hello World!");
 
-		get("/trial", (req, res) -> "note");
+		get("/simay", (req, res) -> "Simay'ım canım kardeşim. Sen bir abinin sahip olabileceği en müthiş kardeşsin.İyiki benim kardeşimsin. Seni çok seviyorum -Abin Mert.");
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
