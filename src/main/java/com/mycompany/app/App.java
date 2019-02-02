@@ -118,6 +118,15 @@ public class App
 		newarray[3] = array[3];
 		
 		Arrays.sort(array);
+
+
+			if(array[0] == array[1]){
+				if(array[1] == array[2]){
+					if(array[2] == array[3]){
+						return "All of the lists standart deviation is equal. : "+array[0];
+					}
+				}
+			}
 		
 		
 
@@ -138,13 +147,7 @@ public class App
 
 		}else{
 
-			if(array[0] == array[1]){
-				if(array[1] == array[2]){
-					if(array[2] == array[3]){
-						return "All of the lists standart deviation is equal. : "+array[0];
-					}
-				}
-			}
+		
 			
 			return "4th list.Its standart deviation is : "+array[0];
 	
