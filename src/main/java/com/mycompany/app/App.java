@@ -97,7 +97,13 @@ public class App
 		starray[0] = "array4" +array[0];
 */
 
-		double newarray[] = array;
+		double[] newarray = new double[4];
+
+		newarray[0] = array[0];
+		newarray[1] = array[1];
+		newarray[2] = array[2];
+		newarray[3] = array[3];
+		
 		Arrays.sort(array);
 		
 		
