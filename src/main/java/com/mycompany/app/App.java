@@ -110,22 +110,22 @@ public class App
 
 		if(array[0] == newarray[0]){
 				
-			return "1st list.Its standart deviation which is : "+array[0];
+			return "1st list.Its standart deviation is : "+array[0];
 	
 		}else if(array[0] == newarray[1]){
 				
 
-			return "2nd list.Its standart deviation which is : "+array[0];
+			return "2nd list.Its standart deviation is : "+array[0];
 	
 
 		}else if(array[0] == newarray[2]){
 				
-			return "3rd list.Its standart deviation which is : "+array[0];
+			return "3rd list.Its standart deviation is : "+array[0];
 	
 
 		}else{
 
-			return "4th list.Its standart deviation which is : "+array[0];
+			return "4th list.Its standart deviation is : "+array[0];
 	
 
 		}
