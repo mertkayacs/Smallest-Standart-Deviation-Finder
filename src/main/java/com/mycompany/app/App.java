@@ -25,9 +25,9 @@ public class App
       return false;
     }
 
-	public static double stdevfind(int[] array){
+	public static double stdev(ArrayList<Integer> array){
 
-		if(array.length == 0)
+		if(array.size() == 0)
 			return -1;
 
 		double sum = 0;		
@@ -38,17 +38,17 @@ public class App
 		System.out.println(sum);
 		
 		
-		double mean = sum / array.length;
+		double mean = sum / array.size();
 		System.out.println(mean);
 		
 		
-		double[] diff = new double[array.length]; 
+		double[] diff = new double[array.size()]; 
 
 		
 		
-		for(int i = 0 ; i < array.length ; i++){
+		for(int i = 0 ; i < array.size() ; i++){
 
-			diff[i] = Math.pow(mean - array[i],2);			
+			diff[i] = Math.pow(mean - array.get(i),2);			
 
 		}
 		
@@ -58,7 +58,7 @@ public class App
 			
 			sum += a;
 
-		sum = sum / (array.length-1); 			
+		sum = sum / (array.size()-1); 			
 				
 		double answer = Math.sqrt(sum);
 			
@@ -71,7 +71,7 @@ public class App
 
 
 	
-	public static String standartDeviation(ArrayList<Integer> array1 , ArrayList<Integer> array2 ,ArrayList<Integer> array3,ArrayList<Integer> int[] array4 ){ 
+	public static String standartDeviation(ArrayList<Integer> array1 , ArrayList<Integer> array2 ,ArrayList<Integer> array3,ArrayList<Integer> array4 ){ 
 
 	//gets 4 integer arrays and shows the order of standart deviation of each array
 		
@@ -83,7 +83,7 @@ public class App
 
 		double ans4 = stdev(array4);
 
-		double array[] = new array[4];
+		double array[] = new double[4];
 		array[0] = ans1;
 		array[1] = ans2;
 		array[2] = ans3;
@@ -97,22 +97,22 @@ public class App
 		starray[0] = "array4" +array[0];
 */
 
-		double array2[] = array[];
+		double newarray[] = array;
 		Arrays.sort(array);
 		
 		
 
-		if(array[0] == array2[0]){
+		if(array[0] == newarray[0]){
 				
 			return "1st list.Its standart deviation which is : "+array[0];
 	
-		}else if(array[0] == array2[1]){
+		}else if(array[0] == newarray[1]){
 				
 
 			return "2nd list.Its standart deviation which is : "+array[0];
 	
 
-		}else if(array[0] == array2[2]){
+		}else if(array[0] == newarray[2]){
 				
 			return "3rd list.Its standart deviation which is : "+array[0];
 	
@@ -197,7 +197,7 @@ public class App
 
 		  //double sonucarray = standartDeviation(inputList1,inputList2,inputList3,inputList4);
 
-          String result = "Smallest standart deviation is : " + standartDeviation(inputList1,inputList2,inputList3,inputList4);	  
+         String result = "Smallest standart deviation is : " + standartDeviation(inputList1,inputList2,inputList3,inputList4);	  
 
          Map map = new HashMap();
           map.put("result", result);
