@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/mertilovski/Smallest-Standart-Deviation-Finder.svg?branch=master)](https://travis-ci.org/mertilovski/Smallest-Standart-Deviation-Finder)
-
+[![Build Status](https://travis-ci.org/mertkaya13/Smallest-Standart-Deviation-Finder.svg?branch=master)](https://travis-ci.org/mertkaya13/Smallest-Standart-Deviation-Finder)
 
 This project is for finding the smallest standart deviation of 4 integer lists.
 
