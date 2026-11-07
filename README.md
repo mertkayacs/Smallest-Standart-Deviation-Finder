@@ -65,10 +65,10 @@ The project is one page and one calculation, and both are easy to read.
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/empty-dark.webp">
-        <img src="docs/assets/readme/tour/empty-light.webp" alt="The result line naming the first list after the second box was left empty">
+        <img src="docs/assets/readme/tour/empty-light.webp" alt="The result line naming the 4th list with a standard deviation of about 0.957, above the empty form">
       </picture>
       <h3>Empty list</h3>
-      An empty list gets the sentinel score 999, so here the first list wins.
+      An empty list gets the sentinel score 999, so it cannot win. Here the 4th list wins with about 0.957.
     </td>
     <td width="50%" valign="top">
       <picture>
