@@ -40,6 +40,49 @@ The project is one page and one calculation, and both are easy to read.
 | <img src="docs/assets/readme/icons/sigma.svg" width="18" height="18" alt=""> **Sample standard deviation** | The calculation in [App.java](src/main/java/com/mycompany/app/App.java) divides by n minus 1. An empty list receives a sentinel score of 999. |
 | <img src="docs/assets/readme/icons/package.svg" width="18" height="18" alt=""> **Builds to one runnable jar** | `mvn package` runs the assembly plugin and writes a single jar with its dependencies. The Procfile holds the original Heroku start command. |
 
+## A quick tour
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/form-dark.webp">
+        <img src="docs/assets/readme/tour/form-light.webp" alt="The compute page with four text boxes filled with lists of integers">
+      </picture>
+      <h3>Four lists in</h3>
+      The page at /compute has four text boxes. Here each holds a list of integers, one per line.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/result-dark.webp">
+        <img src="docs/assets/readme/tour/result-light.webp" alt="The result line &quot;Smallest standart deviation is : 2nd list.Its standart deviation is : 0.5&quot; above the empty form">
+      </picture>
+      <h3>Steadiest list</h3>
+      Submitting the form names the list with the smallest standard deviation and prints its value, here 0.5 for the second list.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/empty-dark.webp">
+        <img src="docs/assets/readme/tour/empty-light.webp" alt="The result line naming the first list after the second box was left empty">
+      </picture>
+      <h3>Empty list</h3>
+      An empty list gets the sentinel score 999, so here the first list wins.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/code-dark.webp">
+        <img src="docs/assets/readme/tour/code-light.webp" alt="Code card showing the standard deviation calculation from App.java">
+      </picture>
+      <h3>Standard deviation</h3>
+      The mean, the squared differences and the square root of their sum divided by n minus 1, as written in App.java.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>The page captures come from the Spark app running locally in Chromium. The code card shows App.java as it is in the repository.</sub></p>
+
 ## Features
 
 **Web app**
@@ -93,5 +136,7 @@ The sample standard deviation, with n minus 1 in the divisor. See [App.java](src
 </details>
 
 If Smallest Standard Deviation Finder is useful to you, a ⭐ helps other people find it.
+
+Photos behind the screenshots are credited in [docs/assets/readme/CREDITS.md](docs/assets/readme/CREDITS.md).
 
 [![views](https://hits.sh/github.com/mertkayacs/Smallest-Standart-Deviation-Finder.svg?view=today-total&style=flat-square&label=views&color=6D597A&labelColor=1E2A38)](https://github.com/mertkayacs/Smallest-Standart-Deviation-Finder)
